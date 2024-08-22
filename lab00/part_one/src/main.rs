@@ -1,3 +1,3 @@
 fn main() {
-    println!("Hello World! I am ready for CSCI 1!");
+    println!("Hello, world! I am ready for CSCI 1!");
 }
