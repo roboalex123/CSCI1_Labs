@@ -1,5 +1,6 @@
 # Ignore the target directory, which is where Cargo stores build outputs
-/target/
+target/
+**/target/
 
 # Ignore the Cargo.lock file if you're creating a library. For binaries, you typically want to check this in.
 # Cargo.lock
@@ -17,13 +18,13 @@
 *.rs.bk
 
 # Ignore files related to Rust's testing tools
-/bench
-/tests
+**/bench
+**/tests
 *.rs.bench
 *.rs.test
 
 # Ignore files related to documentation generation
-/doc/
+**/doc/
 
 /*.log
 
