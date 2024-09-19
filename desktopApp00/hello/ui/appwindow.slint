@@ -1,0 +1,70 @@
+import { Button, VerticalBox, LineEdit, GridBox } from "std-widgets.slint";
+
+export component AppWindow inherits Window {
+    in property <string> printable-string: "";
+    callback say-hello(string);
+    callback close();
+
+    // Background
+    background: #2e3440;
+
+    GridBox {
+        padding: 16px;
+        spacing: 12px;
+
+        Row {
+            // Title
+            Text {
+                text: "First Desktop App";
+                font-size: 18pt;
+                font-weight: 900;
+                color: #d8dee9;
+                horizontal-alignment: center;
+                padding: 12px;
+            }
+        }
+
+        Row {
+            input := LineEdit {
+                placeholder-text: "Please enter your name:";
+                font-size: 16pt;
+                horizontal-alignment: center;
+                padding: 8px;
+                height: 25pt;
+                width: 70%;
+            }
+        }
+
+        Row {
+            button := Button {
+                text: "Submit";
+                primary: true;
+                padding: 10px;
+                height: 20pt;
+                clicked => {
+                    root.say-hello(input.text);
+                }
+            }
+
+            exitButton := Button {
+                text: "All Done!";
+                primary: false;
+                colorize-icon: true;
+                padding: 10px;
+                height: 20pt;
+                clicked => {
+                    root.close();
+                }
+            }
+        }
+
+        Row {
+            Text {
+                text: root.printable-string;
+                font-size: 16pt;
+                horizontal-alignment: center;
+                height: 25pt;
+            }
+        }
+    }
+}
