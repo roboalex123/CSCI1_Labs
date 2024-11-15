@@ -4,11 +4,11 @@ import math
 import random
 
 # Constants
-WORLD_SIZE = 1000
+WORLD_SIZE = 4000
 
 class ShapeDrawer:
-    SHAPE_SIZE_RANGE = (10, 200)
-    NUM_SHAPES_RANGE = (1, 10)
+    SHAPE_SIZE_RANGE = (40, 400)
+    NUM_SHAPES_RANGE = (5, 20)
     SHAPE_ORIENTATION_RANGE = (0, 360)
 
     def draw_circle(self, radius):
